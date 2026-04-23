@@ -5,17 +5,19 @@ import Gallery from '../Components/Gallery'
 import Highlights from '../Components/Highlights'
 import Features from '../Components/Features'
 import Footer from '../Components/Footer'
+import Testimonials from '../Components/Testimonials'
 
 const Home = () => {
   return (
-    <>
+    <section id='home'>
     <Navbar />
     <Hero />
     <Highlights />
-    <Gallery />
     <Features />
+    <Gallery />
     <Footer />
-    </>
+    <Testimonials />
+    </section>
   )
 }
 

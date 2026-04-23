@@ -52,7 +52,7 @@ const Navbar = () => {
                 `}
                 onClick={toggleMenu}
               >
-                <span className="hover:text-accent cursor-pointer">{link}</span>
+                <span className="hover:text-accent cursor-pointer"><a href={`#${link.toLowerCase()}`}>{link}</a></span>
               </li>
             ))}
           </ul>

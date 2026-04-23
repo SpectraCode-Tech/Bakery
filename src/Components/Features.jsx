@@ -11,20 +11,20 @@ const Reasons = [
     },
     {
         icons: `${Fresh}`,
-        title: "Fresh Ingredients",
+        title: "Premium Ingredients",
         description: "We use only the freshest ingredients to ensure the best taste."
     },
     {
         icons:`${expressDelivery}`,
-        title: "Fast Delivery",
-        description: "Get your cakes delivered quickly and safely to your doorstep."
+        title: "Timely Delivery",
+        description: "Get your cakes delivered quickly and safely to your doorstep or event location."
     }
 ]
 
 const Features = () => {
   return (
-    <section className='p-10'>
-          <h1 className='text-lg font-serif italic tracking-wide'>Why choose Us?</h1>
+    <section className='p-10 bg-light'>
+          <h2 className="text-accent uppercase tracking-[0.2em] text-sm font-bold mb-3">Why Choose Us?</h2>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-10 py-5 justify-items-center'>
       {Reasons.map((reason, index) => (
         <div key={index} className='flex flex-col items-center w-70 text-center  space-x-4'>

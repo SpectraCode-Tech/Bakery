@@ -45,13 +45,13 @@ const Gallery = () => {
     : gallery.filter(item => item.category === activeFilter);
 
   return (
-    <section className="py-24 px-6 bg-light min-h-screen">
+    <section className="py-24 px-6 bg-[#fdfaf8] min-h-screen">
       <div className="max-w-7xl mx-auto">
 
         {/* Header & Filter Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
-            <h2 className="text-accent uppercase tracking-[0.2em] text-xs font-bold mb-3">Our Offerings</h2>
+            <h2 className="text-accent uppercase tracking-[0.2em] text-sm font-bold mb-3">Our Offerings</h2>
             <h1 className="text-5xl md:text-6xl font-serif italic text-dark">The Sweet Gallery</h1>
           </div>
 
