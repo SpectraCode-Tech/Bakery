@@ -1,39 +1,63 @@
-import React from "react";
-import customCake from "../assets/customCake.jpg";
+import React from 'react';
+import bdCake from "../assets/customCake.jpg";
 import cupCake from "../assets/cupCake.jpg";
 import decoration from "../assets/Room.jpeg";
-import snacks from "../assets/Chinchin.jpeg";
+import chinchin from "../assets/Chinchin.jpeg";
+import Cake1 from "../assets/Elegant-Cake.jpg";
+import heartCake from "../assets/heartcake.jpg";
+import pkg2 from "../assets/pkg2.jpg";
+import pkg from "../assets/pkg.jpg";
+import Bento from "../assets/bento.jpg";
 
 const highlights = [
-  { name: "Custom Cakes", description: "We bake cakes to match whatever theme the specific occasion calls for", image: `${customCake}` },
-  { name: "Cupcakes", description: "We also provide the best cupcakes in Lagos", image: `${cupCake}` },
-  { name: "Event Decoration", description: "Decorated room for your girlfriend? We're available", image: `${decoration}` },
-  { name: "Snacks", description: "We also make different snacks ", image: `${snacks}` },
+    { image: bdCake, title: "Custom Cakes", category: "Occasions" },
+    { image: cupCake, title: "Gourmet Cupcakes", category: "Treats" },
+    { image: decoration, title: "Event Styling", category: "Decor" },
+    { image: chinchin, title: "Crunchy Chin-Chin", category: "Snacks" },
+    { image: pkg, title: "Valentine Gift Pack", category: "Snacks" },
+    { image: pkg2, title: "Surprise Birthday Package", category: "Snacks" },
+    { image: Bento, title: "Bento Cakes", category: "Treats" },
+    { image: heartCake, title: "Strawberry Cake", category: "Occasions" },
+    { image: Cake1, title: "Birthday Cakes", category: "Occasions" },
 ];
 
 const Highlights = () => {
-  return (
-    <section className="p-10">
-      <h1 className="text-light font-semibold italic pb-5">Our highlights</h1>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 justify-center align-center gap-5">
-        {highlights.map((highlight) => (
-          <div
-            key={highlight.id}
-                className="group shadow-xl hover:scale-105 transition ease-in-out rounded  cursor-pointer overflow-hidden h-90"
-          >
-            <img
-              src={highlight.image}
-              className="pb-3 w-full h-4/5 transition ease-in-out group-hover:scale-105"
-              alt={highlight.name}
-            />
+    return (
+        <section className="py-20 px-6">
+            <div className="max-w-7xl mx-auto">
+                {/* Header Section */}
+                <div className="mb-12">
+                    <h2 className="text-accent uppercase tracking-widest text-sm font-bold">Our Offerings</h2>
+                    <h1 className="text-4xl md:text-5xl font-serif italic mt-2 text-dark">The Sweet Gallery</h1>
+                </div>
 
-              <h2 className="pl-2 font-medium italic">{highlight.name}</h2>
-              <p className="px-2 pb-3 text-sm">{highlight.description}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {highlights.map((item, index) => (
+                        <div
+                            key={index}
+                            className="group relative overflow-hidden rounded-2xl bg-light/10 aspect-3/4 cursor-pointer"
+                        >
+                            <img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                            />
+
+                            <div className="absolute inset-0 bg-linear-to-t from-dark/90 via-transparent to-transparent sm:opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                                <p className="text-accent text-xs uppercase tracking-widest mb-1 sm:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    {item.category}
+                                </p>
+                                <h3 className="text-white text-xl font-medium sm:translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                                    {item.title}
+                                </h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Highlights;

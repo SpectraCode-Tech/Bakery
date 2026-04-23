@@ -4,10 +4,16 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: poppins;
 }
 
 @theme{
   --color-dark: #082C38;
   --color-light: #C19976;
   --color-accent: #FCD8B4;
+  --font-Playfair: 'Playfair Display', serif;
+  --font-Poppins: 'Poppins', sans-serif;
+  --font-Inter: 'Inter', sans-serif;
+  --font-Cormorant: 'Cormorant Garamond', serif;
+  --font-Montserrat: 'Montserrat', sans-serif;
 }
